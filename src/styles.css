@@ -1,0 +1,168 @@
+main {
+   margin-top: 150px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+/*Header -------------------------------*/
+
+
+
+/*Search -------------------------------*/
+
+.searchGithub {
+    width: fit-content;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.searchGithub .MuiInputBase-root {
+    width: 500px;
+    margin-right: 50px;
+}
+.searchGithub .buttonsBox {
+    display: flex;
+}
+.searchGithub .buttonsBox Button:nth-child(1){
+    margin-right: 20px;
+}
+
+.searchRickMorty {
+    width: fit-content;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.searchRickMorty .MuiInputBase-root {
+    width: 500px;
+    margin-right: 50px;
+}
+
+@media (max-width: 900px) {
+
+    .searchGithub {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .searchGithub .MuiInputBase-root {
+        width: 100%;
+        margin: 0px;
+    }
+    .searchGithub .buttonsBox {
+        margin-top: 20px;
+    }
+    .searchGithub .buttonsBox Button span {
+        display: none;
+    }
+
+    .searchRickMorty {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .searchRickMorty .MuiInputBase-root {
+        width: 100%;
+        margin: 0px;
+    }
+
+    .searchRickMorty Button {
+        margin-top: 20px;
+    }
+    
+}
+
+/*Pagination -------------------------------*/
+
+.pagination {
+    margin-top: 20px;
+}
+
+/**/
+
+.MuiPagination-root {
+    display: flex;
+    justify-content: end;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+.MuiPagination-ul {
+   width: fit-content;
+}
+/*Detail -------------------------------*/
+
+.detailContainer {
+    margin-top: 100px;
+    
+}
+
+.detailHeader {
+    margin-bottom: 20px;
+}
+
+.detailHeader .content {
+    display: flex;
+}
+
+.detailHeader .content .contentLeft {
+    margin-right: 50px;
+}
+
+.detailHeader .content .contentLeft img{
+    width: 200px;
+}
+
+.detailHeader .content .contentRight{
+    width: 100%;
+    height: 100%;
+}
+
+.detailHeader .content .contentRight .below {
+    margin-top: 10px;
+}
+
+.detailHeader .content .contentRight .below span {
+    color: black;
+    margin-right: 6px;
+}
+
+/* list Rick & Morty page -------------------------------------*/
+.listRickMortyPage .listbox{
+    
+    margin-top: 30px;
+}
+/* list page --------------------------------------------------*/
+.listContainer {
+    display: flex;
+    width: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.listContainer .card {
+    flex-grow: 1;
+    flex-basis: 250px;
+    max-width: 500px;
+    margin: 10px;
+}
+.title {
+    margin-left: 10px;
+}
+
+@media (max-width: 656px) {
+    .title {
+        text-align: center;
+    }
+    .listbox .MuiPagination-root {
+        justify-content: center;
+    }
+}
+
+.link {
+    text-decoration: none;
+    background-color: #D7D802;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
