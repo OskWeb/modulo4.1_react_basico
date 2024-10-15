@@ -1,16 +1,11 @@
-import React, { ChangeEvent, useContext } from "react";
-import { List } from "../components/list";
-import { MemberEntity } from "../interfaces/member";
-import { DataNotFound } from "../components/dataNotFound";
-import { SearchContextGithub } from "../core/context/searchContextGithub";
-import { ListPagination } from "../pods/listGithub/components/pagination";
-import { Loading } from "../common/loading";
-import { MembersList } from "../types/types";
-import { SearchGithub } from "../components/searchGithub";
-import { fetchDataGithubCorporation } from "../api/fetchDataAPI1";
+import React, { useContext } from 'react'
+import { SearchContextGithub } from '../../core/context/searchContextGithub';
+import { MemberEntity } from './listGithub.vm';
+import { MembersList } from '../../types/types';
+import { fetchDataGithubCorporation } from './listGithub.api';
+import { ListGithubComponent } from './listGithub.component';
 
-
-export const ListPage: React.FC = () => {
+export const ListGithubContainer = () => {
 
     const context = useContext(SearchContextGithub);
     const {
@@ -75,28 +70,22 @@ export const ListPage: React.FC = () => {
         setCurrentSearch("lemoncode")
     }
 
-
     return (
-        <div>
-            <SearchGithub onSearch={handleSearch} onReset={handleReset} term={term} />
-            <h2 className="title">Listado de miembros {currentSearch}</h2>
-            {loadingGithub ? (
-                <Loading />
-            ) : (
-                fetchOK ? (
-                    <>
-                        <List {...membersData} />
-                        <ListPagination
-                            members={members.length}
-                            pagination={handlePagination}
-                            changeRowsPerPage={handleChangeRowsPerPage}
-                            page={currentPage}
-                            perPage={usersPerPage}
-                        />
-                    </>
-
-                ) : <DataNotFound term={term} />
-            )}
-        </div>
-    );
-};
+        <>
+            <ListGithubComponent
+                handleSearch={handleSearch}
+                handleReset={handleReset}
+                term={term}
+                currentSearch={currentSearch}
+                loadingGithub={loadingGithub}
+                fetchOK={fetchOK}
+                membersData={membersData}
+                members={members}
+                handlePagination={handlePagination}
+                handleChangeRowsPerPage={handleChangeRowsPerPage}
+                currentPage={currentPage}
+                usersPerPage={usersPerPage}
+            />
+        </>
+    )
+}

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import Button from '@mui/material/Button';
-import CustomInput from '../common/customInput';
-import { SearchContextRickMorty } from '../core/context/searchContextRickMorty';
+import CustomInput from '../../../common/customInput';
+import { SearchContextRickMorty } from '../../../core/context/searchContextRickMorty';
 import LoopIcon from '@mui/icons-material/Loop';
 
 interface SearchInputProps {
@@ -31,7 +31,6 @@ export const SearchRickMorty: React.FC<SearchInputProps> = ({ onReset }) => {
                 <LoopIcon />
             </Button>
         </div>
-
 
     )
 }

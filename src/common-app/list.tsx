@@ -74,4 +74,3 @@ export const List: React.FC<ListProps> = (props: ListProps) => {
         </div>
     )
 }
-

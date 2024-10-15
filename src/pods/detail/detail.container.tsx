@@ -1,15 +1,13 @@
-import React, { useContext, useEffect } from "react";
-import { Link, useLocation, useParams } from "react-router-dom";
-import { MemberDetailEntity } from "../interfaces/memberDetail";
-import { Detail } from "../components/detail";
-import { fetchDataRickMortyCharacter } from "../api/fetchDataAPI2";
-import { characterDetailEntity } from "../interfaces/characterDetail";
-import { CharacterDetail, MemberDetail } from "../types/types";
-import { fetchDataGithubMember } from "../api/fetchDataAPI1";
-import { SearchContextGithub } from "../core/context/searchContextGithub";
-import { SearchContextRickMorty } from "../core/context/searchContextRickMorty";
+import React, { useEffect } from 'react'
+import { useLocation, useParams } from 'react-router-dom';
+import { fetchDataGithubMember } from './detail.api';
+import { fetchDataRickMortyCharacter } from './detail.api';
+import { characterDetailEntity, MemberDetailEntity } from './detail.vm';
+import { DetailComponent } from './detail.component';
+import { CharacterDetail, MemberDetail } from '../../types/types';
 
-export const DetailPage: React.FC = () => {
+const DetailContainer = () => {
+
     const { id } = useParams();
     const location = useLocation();
 
@@ -57,19 +55,22 @@ export const DetailPage: React.FC = () => {
         character: characterDetail
     }
 
+
     return (
-        <div>
+        <>
             {fetchOK ? (
                 userDetail ? (
-                    <Detail {...userData} />
+                    <DetailComponent {...userData} />
                 )
                     : characterDetail ? (
-                        <Detail {...characterData} />
+                        <DetailComponent {...characterData} />
                     ) : ""
             ) : (
                 ""
             )
             }
-        </div >
-    );
-};
+        </>
+    )
+}
+
+export default DetailContainer

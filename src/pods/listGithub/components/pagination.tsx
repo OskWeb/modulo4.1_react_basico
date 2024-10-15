@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { paginationEntity } from '../interfaces/paginationEntity';
+import { paginationEntity } from '../../../interfaces/paginationEntity';
 import { TablePagination } from '@mui/material';
 
 

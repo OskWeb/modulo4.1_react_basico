@@ -1,12 +1,12 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { App } from "./router/app";
+import { RouterComponent } from "./core/router/router.component";
 
 const container = document.getElementById("root");
 const root = createRoot(container);
 
 root.render(
 
-    <App />
+    <RouterComponent />
 
 );

@@ -1,13 +1,10 @@
-import React, { useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate, BrowserRouter, useLocation } from "react-router-dom";
+import { Navigate, Route, BrowserRouter as Router, Routes } from "react-router-dom"
+import { SearchProviderGithub } from "../context/searchContextGithub"
+import React, { useEffect } from "react"
+import { ListPage1, ListPage2, DetailPage } from "@/scenes";
+import { SearchProviderRickMorty } from "../context/searchContextRickMorty";
 
-import { SearchProviderRickMorty } from "../core/context/searchContextRickMorty";
-import { SearchProviderGithub } from "../core/context/searchContextGithub";
-import { DetailPage } from "@/scenes/detail";
-import { ListPage1 } from "@/scenes/list1";
-import { ListPage2 } from "@/scenes/list2";
-
-export const App = () => {
+export const RouterComponent: React.FC = () => {
 
     useEffect(() => {
         if (window.location.pathname === '/') {
@@ -15,12 +12,10 @@ export const App = () => {
         }
     }, [])
 
+
     return (
         <>
-
             <Router basename="/API">
-
-                {/* <Header /> */}
                 <main>
 
                     <SearchProviderGithub>
@@ -42,6 +37,5 @@ export const App = () => {
             </Router>
         </>
 
-
-    );
-};
+    )
+}

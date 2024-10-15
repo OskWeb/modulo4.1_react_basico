@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
-import { SearchContextGithub } from '../core/context/searchContextGithub';
+import { SearchContextGithub } from '../../../core/context/searchContextGithub';
 import Button from '@mui/material/Button';
-import CustomInput from '../common/customInput';
+import CustomInput from '../../../common/customInput';
 import SearchIcon from '@mui/icons-material/Search';
 import LoopIcon from '@mui/icons-material/Loop';
 

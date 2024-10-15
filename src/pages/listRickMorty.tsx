@@ -5,10 +5,10 @@ import { characterEntity } from '../interfaces/character';
 import { List } from '../components/list';
 import { Pagination } from '@mui/material';
 import { fetchDataRickMortyCharacterPage, filterRickMortyCharacter } from '../api/fetchDataAPI2';
-import { useDebounce } from '../hooks/useDebounce';
+import { useDebounce } from '../common/useDebounce';
 import { SearchRickMorty } from '../components/searchRickMorty';
-import { SearchContextRickMorty } from '../context/searchContextRickMorty';
-import { Loading } from '../components/loading';
+import { SearchContextRickMorty } from '../core/context/searchContextRickMorty';
+import { Loading } from '../common/loading';
 
 
 export const ListRickMorty: React.FC = () => {

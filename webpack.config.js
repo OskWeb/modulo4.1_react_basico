@@ -3,10 +3,13 @@ const path = require("path");
 const basePath = __dirname;
 
 module.exports = {
-  context: path.join(basePath, "src"),
   resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "src"),
+    },
     extensions: [".js", ".ts", ".tsx"],
   },
+  context: path.join(basePath, "src"),
   entry: {
     app: ["./index.tsx", "./styles.css"],
   },

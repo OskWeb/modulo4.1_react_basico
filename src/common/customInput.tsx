@@ -1,9 +1,8 @@
 import * as React from 'react';
 import { Input } from '@mui/material';
 import { useTheme } from '@mui/system';
-import { searchEntity } from '../interfaces/searchEntity';
 
-export default function CustomInput<searchEntity>({ handleInput, term }) {
+export default function CustomInput({ handleInput, term }) {
     return (
         <React.Fragment>
             <Input
