@@ -1,6 +1,9 @@
 import React, { useContext } from 'react'
 import { Alert } from '@mui/material';
-import { dataNotFoundEntity } from '../interfaces/dataNotFound';
+
+interface dataNotFoundEntity {
+    term: string
+}
 
 export const DataNotFound: React.FC<dataNotFoundEntity> = ({ term }) => {
 

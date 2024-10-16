@@ -9,7 +9,9 @@ export interface MemberDetailEntity {
     followers: number;
     following: number;
 }
-
+export interface MemberDetail {
+    member: MemberDetailEntity;
+}
 export interface characterDetailEntity {
     id: string;
     image: string;
@@ -23,4 +25,7 @@ export interface characterDetailEntity {
     location: {
         name: string
     };
+}
+export interface CharacterDetail {
+    character: characterDetailEntity;
 }

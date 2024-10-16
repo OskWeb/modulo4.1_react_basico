@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { MemberEntity } from '../interfaces/member';
-import { characterEntity } from '../interfaces/character';
+import { MemberEntity } from '../pods/listGithub/listGithub.vm';
+import { characterEntity } from '../pods/listRickMorty/listRickMorty.vm';
 import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
 import CardContent from '@mui/material/CardContent';

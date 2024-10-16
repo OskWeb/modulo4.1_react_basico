@@ -1,6 +1,5 @@
 import React from 'react'
-
-import { paginationEntity } from '../../../interfaces/paginationEntity';
+import { paginationEntity } from '../listGithub.vm';
 import { TablePagination } from '@mui/material';
 
 

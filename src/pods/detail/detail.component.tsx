@@ -1,7 +1,7 @@
 import { Card, CardContent, Container, Divider, Typography } from '@mui/material'
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { CharacterDetail, MemberDetail } from '../../types/types';
+import { CharacterDetail, MemberDetail } from '../detail/detail.vm';
 
 type ListProps = MemberDetail | CharacterDetail;
 

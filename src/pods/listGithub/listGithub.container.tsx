@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { SearchContextGithub } from '../../core/context/searchContextGithub';
 import { MemberEntity } from './listGithub.vm';
-import { MembersList } from '../../types/types';
+import { MembersList } from '../listGithub/listGithub.vm';
 import { fetchDataGithubCorporation } from './listGithub.api';
 import { ListGithubComponent } from './listGithub.component';
 
