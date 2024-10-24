@@ -25,14 +25,11 @@ export const ListGithubContainer = () => {
     }, []);
 
     const handleFetchData = async (term: string) => {
-        console.log("termino inicial: " + term);
         let data: any;
 
         data = await fetchDataGithubCorporation(term, setLoadingGithub);
 
         if (data) {
-            console.log("realizada con exito");
-            console.log(data);
             setFetchOk(true);
             setMembers(data);
             setCurrentSearch(term);
@@ -49,7 +46,6 @@ export const ListGithubContainer = () => {
 
     const handlePagination = (event, pageNumber: number) => {
         setCurrentPage(pageNumber);
-        console.log('pagination', pageNumber);
     }
 
     const handleChangeRowsPerPage = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

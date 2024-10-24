@@ -36,8 +36,8 @@ export const List: React.FC<ListProps> = (props: ListProps) => {
         <div className='listContainer'>
             {
                 data ? (
-                    data.map((person) => (
-                        <Card className='card'>
+                    data.map((person, index) => (
+                        <Card className='card' key={index}>
                             <CardActionArea component={Link}
                                 to={"members" in props ? `/list1/detail/${person.login}` : `/list2/detail/${person.id}`}
                                 state={{ from: location.pathname }}
