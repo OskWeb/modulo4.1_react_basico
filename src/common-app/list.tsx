@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { MemberEntity } from '../interfaces/member';
-import { characterEntity } from '../interfaces/character';
+import { MemberEntity } from '../pods/listGithub/listGithub.vm';
+import { characterEntity } from '../pods/listRickMorty/listRickMorty.vm';
 import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
 import CardContent from '@mui/material/CardContent';
@@ -36,8 +36,8 @@ export const List: React.FC<ListProps> = (props: ListProps) => {
         <div className='listContainer'>
             {
                 data ? (
-                    data.map((person) => (
-                        <Card className='card'>
+                    data.map((person, index) => (
+                        <Card className='card' key={index}>
                             <CardActionArea component={Link}
                                 to={"members" in props ? `/list1/detail/${person.login}` : `/list2/detail/${person.id}`}
                                 state={{ from: location.pathname }}

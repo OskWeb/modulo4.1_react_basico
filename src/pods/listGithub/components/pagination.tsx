@@ -1,15 +1,11 @@
 import React from 'react'
-
-import { paginationEntity } from '../../../interfaces/paginationEntity';
+import { paginationEntity } from '../listGithub.vm';
 import { TablePagination } from '@mui/material';
 
 
 export const ListPagination: React.FC<paginationEntity> = ({ members, pagination, changeRowsPerPage, page, perPage }) => {
 
-    const paginationNumbers = [];
-
     return (
-
         <TablePagination
             component="div"
             count={members}

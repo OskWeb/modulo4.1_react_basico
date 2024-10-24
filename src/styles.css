@@ -1,15 +1,9 @@
 main {
    margin-top: 150px;
-    margin-left: 50px;
-    margin-right: 50px;
+   margin-left: 50px;
+   margin-right: 50px;
 }
-
-/*Header -------------------------------*/
-
-
-
-/*Search -------------------------------*/
-
+/*Search -----------------------------------------------*/
 .searchGithub {
     width: fit-content;
     display: flex;
@@ -23,10 +17,14 @@ main {
 .searchGithub .buttonsBox {
     display: flex;
 }
+
+.searchGithub .buttonsBox .actionsGroup {
+    display: flex;
+    margin-right: 30px;
+}
 .searchGithub .buttonsBox Button:nth-child(1){
     margin-right: 20px;
 }
-
 .searchRickMorty {
     width: fit-content;
     display: flex;
@@ -36,6 +34,13 @@ main {
 .searchRickMorty .MuiInputBase-root {
     width: 500px;
     margin-right: 50px;
+}
+.searchRickMorty .MuiButtonBase-root {
+    margin-right: 30px;
+}
+
+.searchRickMorty .buttonsContainer {
+    display: flex;
 }
 
 @media (max-width: 900px) {
@@ -79,9 +84,6 @@ main {
 .pagination {
     margin-top: 20px;
 }
-
-/**/
-
 .MuiPagination-root {
     display: flex;
     justify-content: end;
@@ -128,12 +130,21 @@ main {
     margin-right: 6px;
 }
 
+@media (max-width: 600px) {
+    main {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .detailHeader .content {
+        flex-direction: column;
+    }
+}
+
 /* list Rick & Morty page -------------------------------------*/
 .listRickMortyPage .listbox{
-    
     margin-top: 30px;
 }
-/* list page --------------------------------------------------*/
+/* list Github --------------------------------------------------*/
 .listContainer {
     display: flex;
     width: auto;

@@ -4,7 +4,7 @@ import { fetchDataGithubMember } from './detail.api';
 import { fetchDataRickMortyCharacter } from './detail.api';
 import { characterDetailEntity, MemberDetailEntity } from './detail.vm';
 import { DetailComponent } from './detail.component';
-import { CharacterDetail, MemberDetail } from '../../types/types';
+import { CharacterDetail, MemberDetail } from '../detail/detail.vm';
 
 const DetailContainer = () => {
 

@@ -1,8 +1,8 @@
 import React from 'react'
 import { ListPagination } from './components/pagination'
-import { DataNotFound } from '../../components/dataNotFound'
+import { DataNotFound } from '../../common/dataNotFound'
 import { Loading } from '../../common/loading'
-import { SearchGithub } from '../../components/searchGithub'
+import { SearchGithub } from '../../pods/listGithub/components/searchGithub'
 import { List } from '../../common-app/list'
 
 export const ListGithubComponent = ({
